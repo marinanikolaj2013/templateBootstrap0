@@ -9,35 +9,125 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+        body {
+            background-color: black;
+        }
+
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
             margin-bottom: 0;
             border-radius: 0;
-            background-color: orangered;
+            background-color: black;
+
+
         }
 
         /* Add a gray background color and some padding to the footer */
         footer {
-            background-color: orangered;
+            background-color: black;
+            text-shadow: 2px 2px 3px #999;
             padding: 25px;
         }
 
-        .carousel-inner img {
+        /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+        /* Carousel base class */
+        #myCarousel {
+            height: 320px;
             width: 100%;
-            /* Set width to 100% */
-            margin: auto;
-            min-height: 200px;
+            margin-bottom: 4rem;
         }
 
-        /* Hide the carousel text when the screen is less than 600 pixels wide */
-        @media (max-width: 600px) {
-            .carousel-caption {
-                display: none;
-            }
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
         }
+
+        .carousel-caption>.display-1 {
+            text-shadow: 2px 2px 3px #636e72;
+
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel-inner>.item>img {
+
+
+            width: 100%;
+            height: 320px;
+        }
+
+
+        .carousel-indicators .active {
+
+            background-color: #b2bec3;
+        }
+
         .well {
-            background-color: orangered;
+            background-color: #636e72;
+            font-family: 'Architects Daughter', cursive;
         }
+
+        h1 {
+            color: blanchedalmond;
+            text-shadow: 2px 2px 3px #999;
+            font-family: 'Sansita Swashed', cursive;
+        }
+
+        p {
+            color: blanchedalmond;
+            text-shadow: 2px 2px 3px #999;
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            top: 0;
+            left: 20;
+            right: 0;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+
+            margin-top: 3px;
+        }
+
+        .facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .youtube {
+            background: #bb0000;
+            color: white;
+        }
+        
     </style>
 </head>
 
@@ -51,54 +141,68 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Soy yo</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Tu tienda</a></li>
-                    <li><a href="#">Traductor</a></li>
-                    <li><a href="#">Ayuno</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="#">¡Tu tienda!</a></li>
+                    <li><a href="#">Traducciones</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a> </li>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                    <li></li>
+                    <li>
+                        <link rel="stylesheet"
+                            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                        <a href="https://api.whatsapp.com/send?phone=+5491139110643&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+                            class="float" target="_blank">
+                            <i class="fa fa-whatsapp my-float"></i>
+                        </a></li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
+
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="unnamed.jpg" alt="Image">
+                <img src="online-4275963_1280.jpg" alt="">
                 <div class="carousel-caption">
-                    <h3>Tu programador personal</h3>
-                    <p>Escribiré un sitio web para ti, una tienda en Internet, soporte técnico y asesoramiento</p>
+                    <h2 class="display-1 text-color-primary">Soy tu consultor personal</h2>
+                    <h4>web, tienda, publicidad en redes sociales, soporte, consultas</h4>
                 </div>
             </div>
 
             <div class="item">
-                <img src="images.jpg" alt="Image">
+                <img src="online-shopping-4516043_1280.jpg" alt="">
                 <div class="carousel-caption">
-                    <h3>Únete a mi ayuno en whatsApp</h3>
-                    <p>Grupo de ayuno una vez a la semana: para la salud y la pérdida de peso</p>
+                    <h2 class="display-1 text-color-primary">Soy tu ayudante personal</h2>
+                    <h4>Abrá su negocio ahora y comience a ganar ya</h4>
                 </div>
-            </div>        
+            </div>
             <div class="item">
-                <img src="100070000000000000000126.jpg" alt="Image">
+                <img src="shopping-4694470_1280.jpg" alt="">
                 <div class="carousel-caption">
-                    <h3>Traductor español / ruso</h3>
-                    <p>Traducciones orales y escritas y apoyo con enfoque personal</p>
+                    <h2 class="display-1">Soy tu programador personal</h2>
+                    <h4>Escribiré un sitio web para ti, una tienda online, soporte técnico y asesoramiento</h4>
                 </div>
-            </div>            
+            </div>
         </div>
 
         <!-- Left and right controls -->
@@ -111,35 +215,46 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
     <div class="container text-center">
-        <h3>Marina Mironova</h3><br>
+        <h1>Marina Mironova</h1>
         <div class="row">
             <div class="col-sm-4">
+                <p>¡ Crea tu propio tienda online !</p>
                 <img src="bc8de28c4ecd777c4bba6ac1d625a1c4.jpg" class="img-responsive" style="width:100%" alt="Image">
-                <p>Elige tu futura tienda</p>
             </div>
             <div class="col-sm-4">
-                <img src="a13f612483145d2f7fad230973f72231100007.jpg" class="img-responsive" style="width:100%" alt="Image">
-                <p>Translations and accompaniment</p>
+
+                <p>¡ Crea tu sitio web Profesional !</p>
+                <img src="pagina-web.jpg" class="img-responsive" style="width:100%" alt="Image">
+
             </div>
             <div class="col-sm-4">
                 <div class="well">
-                    <p>Plantillas sofisticadas para cualquier tipo de tienda. Alojamiento y dominio gratuitos. ¡Llámanos! Comienzo rápido. Version móvil.</p>
+                    <p>Plantillas sofisticadas para cualquier tipo de tienda. Alojamiento y dominio.
+                        ¡Llámame! Comienzo rápido. Version móvil.</p>
                 </div>
                 <div class="well">
                     <p>Acompañamiento de un intérprete en Argentina a cualquier institución
-                        y en el extranjero. Traducciones orales y escritas. Universidad de Moscú / y de Buenos Aires</p>
+                        y en el extranjero. Traducciones orales y escritas. Universidad de Moscú / y de Buenos Aires
+                    </p>
                 </div>
             </div>
         </div>
     </div><br>
 
+
     <footer class="container-fluid text-center">
-        <p>Estoy en las redes sociales</p>    
+        <p>Buenos-Aires</p>
         <p>2020</p>
+
     </footer>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
